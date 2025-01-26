@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Web Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Part 1: CSS3 Transitions and Animations -->
+    <section id="part1">
+      <h2>Part 1: CSS3 Transitions and Animations</h2>
+      <div class="interactive-elements">
+        <!-- Hover transition for button -->
+        <button id="hoverButton" class="transition-button">Hover Me!</button>
+        
+        <!-- CSS Animation Example: Fading Effect -->
+        <div id="fade" class="fade-box">Fading Box</div>
+        
+        <!-- CSS Animation Example: Rotating Effect -->
+        <div id="rotate" class="rotate-box">Rotating Box</div>
+        
+        <!-- Button for smooth scale transition -->
+        <button id="scaleButton" class="scale-button">Click to Scale</button>
+      </div>
+    </section>
+
+    <!-- Part 2: JavaScript Functions -->
+    <section id="part2">
+      <h2>Part 2: JavaScript Functions</h2>
+      <form id="calcForm">
+        <!-- Function to calculate area -->
+        <label for="length">Length (m):</label>
+        <input type="number" id="length" placeholder="Enter length" required>
+        
+        <label for="width">Width (m):</label>
+        <input type="number" id="width" placeholder="Enter width" required>
+        
+        <button type="button" onclick="calculateArea()">Calculate Area</button>
+        <p id="areaResult"></p>
+        
+        <!-- Function to demonstrate scope -->
+        <button type="button" onclick="showScope()">Show Scope</button>
+        <p id="scopeResult"></p>
+        
+        <!-- Function to toggle CSS class for animation -->
+        <button type="button" onclick="toggleAnimation()">Toggle Animation</button>
+        <div id="animationBox" class="hidden">Animated Box</div>
+      </form>
+    </section>
+
+    <!-- Part 3: Combining CSS Animations with JavaScript -->
+    <section id="part3">
+      <h2>Part 3: Combining CSS Animations with JavaScript</h2>
+      <button type="button" onclick="triggerAnimation()">Click to Animate</button>
+      <div id="triggerBox" class="trigger-box">Trigger Box</div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

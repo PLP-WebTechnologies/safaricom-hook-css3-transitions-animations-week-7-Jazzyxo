@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .interactive-elements {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+  
+  /* Part 1: CSS Transitions and Animations */
+  .transition-button {
+    padding: 12px 30px;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .transition-button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+  }
+  
+  .fade-box {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    margin-top: 20px;
+    animation: fadeOut 2s infinite alternate;
+    border-radius: 8px;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.2;
+    }
+  }
+  
+  .rotate-box {
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral;
+    margin-top: 20px;
+    animation: rotate 3s infinite linear;
+    border-radius: 8px;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Scaling button transition */
+  .scale-button {
+    padding: 12px 30px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+  }
+  
+  .scale-button:active {
+    transform: scale(1.1);
+  }
+  
+  /* Part 2: CSS for toggling animation */
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  #animationBox {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
+  #triggerBox {
+    width: 200px;
+    height: 200px;
+    background-color: lightgoldenrodyellow;
+    margin-top: 20px;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    border-radius: 8px;
+  }
+  
+  .trigger-box.animate {
+    transform: translateX(300px);
+    background-color: #ff9800;
+  }
+  
+  /* Form and Input Styling */
+  input, button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  input:focus, button:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .interactive-elements {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #triggerBox, .fade-box, .rotate-box {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
